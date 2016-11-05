@@ -36,7 +36,7 @@
 }
 -(void)mostrarMensagem:(NSString *)titulo msg:(NSString *)mensagem {
     UIAlertView *alerta = [[UIAlertView alloc] initWithTitle:titulo message:mensagem delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    
-    
+    [alerta show];
+    alerta = nil;
 }
 @end
