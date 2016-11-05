@@ -15,6 +15,7 @@
 		03B2BFE11DCDEB6700203357 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B2BFDF1DCDEB6700203357 /* LaunchScreen.xib */; };
 		03B2BFED1DCDEB6700203357 /* AlcoolGasolinaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B2BFEC1DCDEB6700203357 /* AlcoolGasolinaTests.m */; };
 		03B2BFF71DCE072D00203357 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B2BFF61DCE072D00203357 /* Social.framework */; };
+		03B2BFF91DCE2C4600203357 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B2BFF81DCE2C4600203357 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		03B2BFEB1DCDEB6700203357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03B2BFEC1DCDEB6700203357 /* AlcoolGasolinaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlcoolGasolinaTests.m; sourceTree = "<group>"; };
 		03B2BFF61DCE072D00203357 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		03B2BFF81DCE2C4600203357 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03B2BFF91DCE2C4600203357 /* MessageUI.framework in Frameworks */,
 				03B2BFF71DCE072D00203357 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +69,7 @@
 		03B2BFC41DCDEB6700203357 = {
 			isa = PBXGroup;
 			children = (
+				03B2BFF81DCE2C4600203357 /* MessageUI.framework */,
 				03B2BFF61DCE072D00203357 /* Social.framework */,
 				03B2BFCF1DCDEB6700203357 /* AlcoolGasolina */,
 				03B2BFE91DCDEB6700203357 /* AlcoolGasolinaTests */,

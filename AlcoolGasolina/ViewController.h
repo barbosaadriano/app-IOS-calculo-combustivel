@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <Social/Social.h>
+#import <MessageUI/MessageUI.h>
 
-@interface ViewController : UIViewController<UITextFieldDelegate, UIActionSheetDelegate>
+@interface ViewController : UIViewController<UITextFieldDelegate, UIActionSheetDelegate, MFMessageComposeViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *valorAlcool;
 @property (strong, nonatomic) IBOutlet UITextField *valorGasolina;

@@ -95,9 +95,23 @@
     [controlador setInitialText:texto];
     [controlador addURL:[NSURL URLWithString:@"http://avantagem.com.br/"]];
 //    [controlador addImage:[UIImage imageNamed:@"logo.png"]];
-    
+    [self presentViewController:controlador animated:YES completion:nil];
 }
 -(void)compartilharEmail {
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *email =
+        [[MFMailComposeViewController alloc] init];
+        email.mailComposeDelegate = self;
+        [email setSubject:@"Alcool ou Gasolina?"];
+        [email setMessageBody:[self retornaMensagem] isHTML:YES];
+        [email setToRecipients:[NSArray arrayWithObjects:@"contato@avantagem.com.br",@"contato@adrianob.com.br",@"b.adrianobarbosa@gmail.com", nil]];
+        NSData *anexo  = [UIImagePNGRepresentation([UIImage imageNamed:@"Logo.png"])];
+        [email addAttachmentData:anexo mimeType:@"image/png" fileName:@"Logo.png"];
+        
+        
+    } else {
+        [self mostrarMensagem:@"Pós alfa" msg:@"Não é possível enviar email"];
+    }
 }
 -(NSString *) retornaMensagem {
     float alcool = [valorAlcool.text floatValue];
