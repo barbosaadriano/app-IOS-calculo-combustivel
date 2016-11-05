@@ -51,11 +51,11 @@
 -(void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 0: {
-            [self compartilharFacebook];
+            [self compartilharSocial:@"F"];
         }
             break;
         case 1:{
-            [self compartilharTwitter];
+            [self compartilharSocial:@"T"];
         }
             break;
         case 2:{
@@ -65,10 +65,44 @@
             break;
     }
 }
--(void)compartilharFacebook {
-}
--(void)compartilharTwitter {
+-(void)compartilharSocial:(NSString *)tipo {
+    if ([tipo isEqual:@"F"]){
+        if (![SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+            [self mostrarMensagem:@"Pós alfa" msg:@"Facebook não configurado ou indisponível"];
+            return;
+        }
+        
+    } else {
+        if (![SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+            [self mostrarMensagem:@"Pós alfa" msg:@"Twitter não configurado ou indisponível"];
+            return;
+        }
+        
+    }
+    NSString    *texto = [self retornaMensagem];
+    if ([tipo isEqual:@"T"])
+        texto = [texto substringWithRange:NSMakeRange(0, 140)];
+    SLComposeViewController *controlador;
+    if ([tipo isEqual:@"F"]) {
+        controlador = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    } else {
+        controlador = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    }
+    SLComposeViewControllerCompletionHandler controleFim = ^(SLComposeViewControllerResult result) {
+        [controlador dismissViewControllerAnimated:true completion:nil];
+    };
+    controlador.completionHandler = controleFim;
+    [controlador setInitialText:texto];
+    [controlador addURL:[NSURL URLWithString:@"http://avantagem.com.br/"]];
+//    [controlador addImage:[UIImage imageNamed:@"logo.png"]];
+    
 }
 -(void)compartilharEmail {
+}
+-(NSString *) retornaMensagem {
+    float alcool = [valorAlcool.text floatValue];
+    float gasolina = [valorGasolina.text floatValue];
+    NSString *retorno = [NSString stringWithFormat:@"Valor do álcool: %f. Valor da gasolina: %f", alcool, gasolina];
+    return retorno;
 }
 @end
