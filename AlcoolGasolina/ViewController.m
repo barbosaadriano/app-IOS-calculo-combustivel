@@ -48,5 +48,27 @@
     [textField resignFirstResponder];
     return true;
 }
-
+-(void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 0: {
+            [self compartilharFacebook];
+        }
+            break;
+        case 1:{
+            [self compartilharTwitter];
+        }
+            break;
+        case 2:{
+            [self compartilharEmail];
+        }
+        default:
+            break;
+    }
+}
+-(void)compartilharFacebook {
+}
+-(void)compartilharTwitter {
+}
+-(void)compartilharEmail {
+}
 @end
