@@ -105,13 +105,16 @@
         [email setSubject:@"Alcool ou Gasolina?"];
         [email setMessageBody:[self retornaMensagem] isHTML:YES];
         [email setToRecipients:[NSArray arrayWithObjects:@"contato@avantagem.com.br",@"contato@adrianob.com.br",@"b.adrianobarbosa@gmail.com", nil]];
-        NSData *anexo  = [UIImagePNGRepresentation([UIImage imageNamed:@"Logo.png"])];
-        [email addAttachmentData:anexo mimeType:@"image/png" fileName:@"Logo.png"];
-        
+//        NSData *anexo  = [UIImagePNGRepresentation([UIImage imageNamed:@"Logo.png"])];
+//        [email addAttachmentData:anexo mimeType:@"image/png" fileName:@"Logo.png"];
+        [self presentViewController:email animated:YES completion:nil];
         
     } else {
         [self mostrarMensagem:@"Pós alfa" msg:@"Não é possível enviar email"];
     }
+}
+-(void)mailComposeController : (MFMailComposeViewController *) controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 -(NSString *) retornaMensagem {
     float alcool = [valorAlcool.text floatValue];
