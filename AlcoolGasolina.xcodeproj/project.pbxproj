@@ -14,6 +14,7 @@
 		03B2BFDE1DCDEB6700203357 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03B2BFDD1DCDEB6700203357 /* Images.xcassets */; };
 		03B2BFE11DCDEB6700203357 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B2BFDF1DCDEB6700203357 /* LaunchScreen.xib */; };
 		03B2BFED1DCDEB6700203357 /* AlcoolGasolinaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B2BFEC1DCDEB6700203357 /* AlcoolGasolinaTests.m */; };
+		03B2BFF71DCE072D00203357 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B2BFF61DCE072D00203357 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		03B2BFE61DCDEB6700203357 /* AlcoolGasolinaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlcoolGasolinaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B2BFEB1DCDEB6700203357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03B2BFEC1DCDEB6700203357 /* AlcoolGasolinaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlcoolGasolinaTests.m; sourceTree = "<group>"; };
+		03B2BFF61DCE072D00203357 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03B2BFF71DCE072D00203357 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		03B2BFC41DCDEB6700203357 = {
 			isa = PBXGroup;
 			children = (
+				03B2BFF61DCE072D00203357 /* Social.framework */,
 				03B2BFCF1DCDEB6700203357 /* AlcoolGasolina */,
 				03B2BFE91DCDEB6700203357 /* AlcoolGasolinaTests */,
 				03B2BFCE1DCDEB6700203357 /* Products */,

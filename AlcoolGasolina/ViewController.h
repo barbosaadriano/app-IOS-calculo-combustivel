@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Social/Social.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITextFieldDelegate, UIActionSheetDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *valorAlcool;
 @property (strong, nonatomic) IBOutlet UITextField *valorGasolina;
 
 -(IBAction)calcular:(id)sender;
+-(IBAction)compartilhar:(id)sender;
 
 @end
 

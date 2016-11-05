@@ -39,4 +39,14 @@
     [alerta show];
     alerta = nil;
 }
+
+-(IBAction)compartilhar:(id)sender {
+    UIActionSheet *popup = [[UIActionSheet alloc]initWithTitle:@"Compartilhar" delegate:self cancelButtonTitle:@"Voltar" destructiveButtonTitle:nil otherButtonTitles:@"Facebook", @"Twitter", @"E-mail", nil];
+    [popup showInView:self.view];
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return true;
+}
+
 @end
