@@ -16,6 +16,7 @@
 		03B2BFED1DCDEB6700203357 /* AlcoolGasolinaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B2BFEC1DCDEB6700203357 /* AlcoolGasolinaTests.m */; };
 		03B2BFF71DCE072D00203357 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B2BFF61DCE072D00203357 /* Social.framework */; };
 		03B2BFF91DCE2C4600203357 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B2BFF81DCE2C4600203357 /* MessageUI.framework */; };
+		03B2BFFC1DCE46F100203357 /* HistoricoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B2BFFB1DCE46F100203357 /* HistoricoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		03B2BFEC1DCDEB6700203357 /* AlcoolGasolinaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlcoolGasolinaTests.m; sourceTree = "<group>"; };
 		03B2BFF61DCE072D00203357 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		03B2BFF81DCE2C4600203357 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		03B2BFFA1DCE46F100203357 /* HistoricoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoricoViewController.h; sourceTree = "<group>"; };
+		03B2BFFB1DCE46F100203357 /* HistoricoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoricoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				03B2BFDD1DCDEB6700203357 /* Images.xcassets */,
 				03B2BFDF1DCDEB6700203357 /* LaunchScreen.xib */,
 				03B2BFD01DCDEB6700203357 /* Supporting Files */,
+				03B2BFFA1DCE46F100203357 /* HistoricoViewController.h */,
+				03B2BFFB1DCE46F100203357 /* HistoricoViewController.m */,
 			);
 			path = AlcoolGasolina;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 				03B2BFD91DCDEB6700203357 /* ViewController.m in Sources */,
 				03B2BFD61DCDEB6700203357 /* AppDelegate.m in Sources */,
 				03B2BFD31DCDEB6700203357 /* main.m in Sources */,
+				03B2BFFC1DCE46F100203357 /* HistoricoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
