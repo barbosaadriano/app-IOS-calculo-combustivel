@@ -16,7 +16,13 @@
 @synthesize valorAlcool, valorGasolina;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    filePath = [NSHomeDirectory() stringByAppendingString:@"/Documents/dados.plist"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+        dados = [NSMutableArray arrayWithContentsOfFile:filePath];
+    } else {
+        dados = [[NSMutableArray alloc] init];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -127,5 +133,12 @@
     NSDictionary * item = [NSDictionary dictionaryWithObjectsAndKeys:valorAlcool.text,@"alcool",valorGasolina.text,@"gasolina", nil];
     [dados addObject:item];
     [dados writeToFile:filePath atomically:YES];
+    [self listarDados];
+}
+-(void)listarDados{
+    for (NSDictionary *item in dados) {
+        NSLog(@"Álcool: %@. Gasolina: %@.",[item objectForKey:@"alcool"],[item objectForKey:@"gasolina"]);
+    }
+    NSLog(@"-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-");
 }
 @end
