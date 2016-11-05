@@ -122,4 +122,10 @@
     NSString *retorno = [NSString stringWithFormat:@"Valor do álcool: %f. Valor da gasolina: %f", alcool, gasolina];
     return retorno;
 }
+
+-(IBAction)gravar:(id)sender {
+    NSDictionary * item = [NSDictionary dictionaryWithObjectsAndKeys:valorAlcool.text,@"alcool",valorGasolina.text,@"gasolina", nil];
+    [dados addObject:item];
+    [dados writeToFile:filePath atomically:YES];
+}
 @end

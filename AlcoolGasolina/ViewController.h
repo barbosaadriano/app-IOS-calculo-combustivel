@@ -10,13 +10,18 @@
 #import <Social/Social.h>
 #import <MessageUI/MessageUI.h>
 
-@interface ViewController : UIViewController<UITextFieldDelegate, UIActionSheetDelegate, MFMessageComposeViewControllerDelegate>
+@interface ViewController : UIViewController<UITextFieldDelegate, UIActionSheetDelegate, MFMessageComposeViewControllerDelegate>{
+    NSString *filePath;
+    NSMutableArray *dados;
+}
 
 @property (strong, nonatomic) IBOutlet UITextField *valorAlcool;
 @property (strong, nonatomic) IBOutlet UITextField *valorGasolina;
 
 -(IBAction)calcular:(id)sender;
 -(IBAction)compartilhar:(id)sender;
+-(IBAction)gravar:(id)sender;
+
 
 @end
 
