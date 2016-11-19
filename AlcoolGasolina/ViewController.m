@@ -30,15 +30,33 @@
     // Dispose of any resources that can be recreated.
 }
 -(IBAction)calcular:(id)sender {
-    float alcool =  valorAlcool.text.floatValue;
-    float gasolina = [valorGasolina.text floatValue];
-    if (alcool<(gasolina * 0.7)) {
-         [self mostrarMensagem:@"Pós Alfa" msg:@"Álcool é melhor"];
-    } else if (alcool>(gasolina * 0.7)) {
-        [self mostrarMensagem:@"Pós Alfa" msg:@"Gasolina é melhor"];
-    } else {
-        [self mostrarMensagem:@"Pós Alfa" msg:@"Tanto faz"];
+    if ([self validarForm]) {
+        float alcool =  valorAlcool.text.floatValue;
+        float gasolina = [valorGasolina.text floatValue];
+        if (alcool<(gasolina * 0.7)) {
+            [self mostrarMensagem:@"Pós Alfa" msg:@"Álcool é melhor"];
+        } else if (alcool>(gasolina * 0.7)) {
+            [self mostrarMensagem:@"Pós Alfa" msg:@"Gasolina é melhor"];
+        } else {
+            [self mostrarMensagem:@"Pós Alfa" msg:@"Tanto faz"];
+        }
     }
+}
+-(BOOL) validarForm {
+ if (![self validateNumber:valorAlcool.text]){
+        [self mostrarMensagem:@"Validação" msg:@"Valor do Álcool é inválido!"];
+        return false;
+    }
+    if (![self validateNumber:valorGasolina.text]){
+        [self mostrarMensagem:@"Validação" msg:@"Valor da gasolina é inválido!"];
+        return false;
+    }
+    return true;
+}
+- (BOOL) validateNumber: (NSString *) candidate {
+    NSString *numberRegex = @"[0-9]+\\.[0-9]+";
+    NSPredicate *numberTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", numberRegex];
+    return [numberTest evaluateWithObject:candidate];
 }
 -(void)mostrarMensagem:(NSString *)titulo msg:(NSString *)mensagem {
     UIAlertView *alerta = [[UIAlertView alloc] initWithTitle:titulo message:mensagem delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -130,10 +148,12 @@
 }
 
 -(IBAction)gravar:(id)sender {
-    NSDictionary * item = [NSDictionary dictionaryWithObjectsAndKeys:valorAlcool.text,@"alcool",valorGasolina.text,@"gasolina", nil];
-    [dados addObject:item];
-    [dados writeToFile:filePath atomically:YES];
-    [self listarDados];
+    if ([self validarForm]) {
+        NSDictionary * item = [NSDictionary dictionaryWithObjectsAndKeys:valorAlcool.text,@"alcool",valorGasolina.text,@"gasolina", nil];
+        [dados addObject:item];
+        [dados writeToFile:filePath atomically:YES];
+        [self listarDados];
+    }
 }
 -(void)listarDados{
     for (NSDictionary *item in dados) {

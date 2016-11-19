@@ -80,6 +80,15 @@
                                     <segue destination="jR6-Dh-v3k" kind="show" id="dBg-nS-dnL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4T4-Op-SAm">
+                                <rect key="frame" x="104" y="244" width="113" height="30"/>
+                                <state key="normal" title="Site da Empresa">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ST0-mC-egX" kind="show" id="Lza-vM-WuJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -164,6 +173,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZ0-ks-dEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="776" y="618"/>
+        </scene>
+        <!--Site View Controller-->
+        <scene sceneID="bes-9b-QYp">
+            <objects>
+                <viewController id="ST0-mC-egX" customClass="SiteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8VS-0x-Kqg"/>
+                        <viewControllerLayoutGuide type="bottom" id="s8T-cX-esg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T6G-QB-cd5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="uwT-6v-sBx">
+                                <rect key="frame" x="142" y="260" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2NI-H9-1Nn">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Site" id="pjA-BM-GbC">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="kQk-4s-yYU">
+                                            <connections>
+                                                <action selector="voltar:" destination="ST0-mC-egX" id="grb-0u-tuR"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kc9-66-0Ut">
+                                <rect key="frame" x="0.0" y="72" width="320" height="414"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="site" destination="Kc9-66-0Ut" id="ajs-5f-AT2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qSR-4P-WdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="445" y="1093"/>
         </scene>
         <!--Detalhes View Controller-->
         <scene sceneID="Zkf-2V-9w3">

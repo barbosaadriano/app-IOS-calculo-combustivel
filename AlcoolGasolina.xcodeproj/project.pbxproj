@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0316E9931DE0775D003B5380 /* DetalhesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0316E9921DE0775D003B5380 /* DetalhesViewController.m */; };
+		0316E9961DE09CFF003B5380 /* SiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0316E9951DE09CFF003B5380 /* SiteViewController.m */; };
 		03B2BFD31DCDEB6700203357 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B2BFD21DCDEB6700203357 /* main.m */; };
 		03B2BFD61DCDEB6700203357 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B2BFD51DCDEB6700203357 /* AppDelegate.m */; };
 		03B2BFD91DCDEB6700203357 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B2BFD81DCDEB6700203357 /* ViewController.m */; };
@@ -33,6 +34,8 @@
 /* Begin PBXFileReference section */
 		0316E9911DE0775D003B5380 /* DetalhesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalhesViewController.h; sourceTree = "<group>"; };
 		0316E9921DE0775D003B5380 /* DetalhesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalhesViewController.m; sourceTree = "<group>"; };
+		0316E9941DE09CFF003B5380 /* SiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteViewController.h; sourceTree = "<group>"; };
+		0316E9951DE09CFF003B5380 /* SiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteViewController.m; sourceTree = "<group>"; };
 		03B2BFCD1DCDEB6700203357 /* AlcoolGasolina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlcoolGasolina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B2BFD11DCDEB6700203357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03B2BFD21DCDEB6700203357 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -107,6 +110,8 @@
 				03B2BFFB1DCE46F100203357 /* HistoricoViewController.m */,
 				0316E9911DE0775D003B5380 /* DetalhesViewController.h */,
 				0316E9921DE0775D003B5380 /* DetalhesViewController.m */,
+				0316E9941DE09CFF003B5380 /* SiteViewController.h */,
+				0316E9951DE09CFF003B5380 /* SiteViewController.m */,
 			);
 			path = AlcoolGasolina;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03B2BFD91DCDEB6700203357 /* ViewController.m in Sources */,
+				0316E9961DE09CFF003B5380 /* SiteViewController.m in Sources */,
 				03B2BFD61DCDEB6700203357 /* AppDelegate.m in Sources */,
 				03B2BFD31DCDEB6700203357 /* main.m in Sources */,
 				0316E9931DE0775D003B5380 /* DetalhesViewController.m in Sources */,
