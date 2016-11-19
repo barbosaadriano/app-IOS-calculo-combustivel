@@ -202,9 +202,42 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="InX-Xd-lFR">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="ZzC-ac-xzL"/>
+                                    <barButtonItem style="plain" systemItem="rewind" id="Je2-8O-dTX">
+                                        <connections>
+                                            <action selector="goBack" destination="Kc9-66-0Ut" id="4Sh-Bf-dlE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="t4R-uB-ZKj"/>
+                                    <barButtonItem systemItem="fastForward" id="qej-Ho-Cdt">
+                                        <connections>
+                                            <action selector="goForward" destination="Kc9-66-0Ut" id="duy-8d-yuZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eTI-w7-p4k"/>
+                                    <barButtonItem systemItem="stop" id="7ie-4R-ia2">
+                                        <connections>
+                                            <action selector="stopLoading" destination="Kc9-66-0Ut" id="PUS-m6-8dt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6WK-VP-dy6"/>
+                                    <barButtonItem systemItem="refresh" id="47j-iF-jRo">
+                                        <connections>
+                                            <action selector="reload" destination="Kc9-66-0Ut" id="JFC-ek-rzL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="Rv9-3U-jzo"/>
+                                </items>
+                            </toolbar>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kc9-66-0Ut">
-                                <rect key="frame" x="0.0" y="72" width="320" height="414"/>
+                                <rect key="frame" x="0.0" y="72" width="320" height="364"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ST0-mC-egX" id="7AO-w5-QeO"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -212,11 +245,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="site" destination="Kc9-66-0Ut" id="ajs-5f-AT2"/>
+                        <outlet property="spinner" destination="uwT-6v-sBx" id="C5g-Pf-WA2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSR-4P-WdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="445" y="1093"/>
+            <point key="canvasLocation" x="411" y="1089"/>
         </scene>
         <!--Detalhes View Controller-->
         <scene sceneID="Zkf-2V-9w3">

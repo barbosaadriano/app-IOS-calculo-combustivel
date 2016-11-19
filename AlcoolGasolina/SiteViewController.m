@@ -19,6 +19,7 @@
     NSString *urlString = @"http://avantagem.com.br/";
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    site.scalesPageToFit = YES;
     [site loadRequest:request];
 }
 
@@ -36,5 +37,7 @@
 -(void) webViewDidFinishLoad:(UIWebView *)webView {
     [self.spinner stopAnimating];
 }
-
+-(void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error  {
+    [self.spinner stopAnimating];
+}
 @end
