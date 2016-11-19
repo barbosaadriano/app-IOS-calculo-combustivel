@@ -7,6 +7,7 @@
 //
 
 #import "HistoricoViewController.h"
+#import "DetalhesViewController.h"
 
 @interface HistoricoViewController ()
 
@@ -65,6 +66,21 @@
         return @"Gasolina é melhor";
     } else {
         return @"Tanto faz";
+    }
+}
+/** evento só para menus
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *item = [dados objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"telaDetalhe" sender:self];
+}
+ */
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"telaDetalhe"]) {
+        NSInteger row = [tabela.indexPathForSelectedRow row];
+        NSDictionary *item = [dados objectAtIndex:row];
+        DetalhesViewController *detalhes = segue.destinationViewController;
+        detalhes.item = item;
+        [tabela deselectRowAtIndexPath:tabela.indexPathForSelectedRow animated:YES];
     }
 }
 @end

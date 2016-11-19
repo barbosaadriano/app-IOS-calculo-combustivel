@@ -10,4 +10,10 @@
 
 @interface DetalhesViewController : UIViewController
 
+@property   (strong, nonatomic) IBOutlet UILabel *lbGasolina;
+@property   (strong,nonatomic) IBOutlet UILabel *lblAlcool;
+
+@property (strong, nonatomic) NSDictionary *item;
+-(IBAction)voltar:(id)sender;
+
 @end
