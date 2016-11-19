@@ -91,6 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="385" y="404"/>
         </scene>
         <!--Historico View Controller-->
         <scene sceneID="Tc0-TI-hQl">
@@ -140,8 +141,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.47450980392156861" green="0.15581102283410955" blue="0.2177598886839423" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.40702461275497259" green="0.86117029671717171" blue="0.66235010949513462" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="Fcr-Dc-wh6" kind="show" identifier="telaDetalhe" id="Saz-la-VDQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -159,7 +163,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZ0-ks-dEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962" y="431"/>
+            <point key="canvasLocation" x="776" y="618"/>
+        </scene>
+        <!--Detalhes View Controller-->
+        <scene sceneID="Zkf-2V-9w3">
+            <objects>
+                <viewController id="Fcr-Dc-wh6" customClass="DetalhesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wUK-3R-sWj"/>
+                        <viewControllerLayoutGuide type="bottom" id="w3v-HW-sVN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SFE-41-lcj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wc7-ah-ayh">
+                                <rect key="frame" x="16" y="82" width="121" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWB-U8-Oil">
+                                <rect key="frame" x="16" y="111" width="121" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JRH-vc-VMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1142" y="404"/>
         </scene>
     </scenes>
 </document>
